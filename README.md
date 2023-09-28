@@ -1,5 +1,5 @@
-<div display="flex">
-<img src="./.github/spotify.png" alt="icone spotify" /><h1>Spotify-clone</h1>
+<div>
+<img src="./.github/spotify.png" alt="icone spotify" width="100px" /><span><h1>Spotify-clone</h1></span>
 </div>
 
 <p align="center">
