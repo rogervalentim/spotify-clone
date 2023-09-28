@@ -1,12 +1,10 @@
-<img src="./.github/spotify.png" alt="icone spotify" /><h1>Spotify clone</h1>
-
 <h1>🎵Spotify clone🎵</h1>
 
-<p align="center">
+<p align+"center">
 <img src="./.github/spotify-clone.png" alt="imagem do projeto" width="100%" />
 </p>
 
-<a href="https://spotify-clone-one-beige.vercel.app/" target="__blank">clique aqui para ver o projeto</a>
+clique no Link da descrição para ver o projeto
 
 💻<h1>Tecnologias</h1>
 <ul>
