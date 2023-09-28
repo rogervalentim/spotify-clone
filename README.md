@@ -1,5 +1,8 @@
 <h1>🎵Spotify clone🎵</h1>
-<img src="./github/spotify-clone.png" />
+
+<p align+"center">
+<img src="./github/spotify-clone.png" alt="imagem do projeto" width="100%" />
+</p>
 
 clique no Link da descrição para ver o projeto
 
