@@ -1,4 +1,3 @@
-<img src="./.github/spotify.png" alt="icone spotify" /><h1>Spotify clone</h1>
 <img src="./.github/spotify-clone.png" />
 
 <p align="center">
