@@ -1,0 +1,41 @@
+.musics-container {
+  background-color: #121212;
+  width: 1020px;
+  height: 100vh;
+  max-height: 495px;
+  border-radius: 0 0 10px 10px;
+  margin-left: 10px;
+  overflow-y: auto;
+}
+
+.gradient {
+  background-image: linear-gradient(#242424, #121212);
+  height: 250px;
+}
+
+.musics-title-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.musics-title-container h1 {
+  color: #fff;
+  font-size: 23px;
+  margin-left: 15px;
+}
+
+.musics-title-container a {
+  font-size: 12px;
+  margin-top: 5px;
+  margin-right: 20px;
+  padding: 5px;
+}
+
+.grid-cards-musics {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  justify-content: space-around;
+  margin-top: 20px;
+}

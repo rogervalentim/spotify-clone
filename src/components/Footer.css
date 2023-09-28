@@ -1,0 +1,39 @@
+footer {
+  width: 1345px;
+  /* background-image: radial-gradient(circle,  0%, 100%); */
+  background-image: linear-gradient(90deg, #CC4BC2 20%, #A657AE  35%, #758BFD 100%);
+  margin-left: 10px;
+  margin-top: 10px;
+  height: 60px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-paragrafos {
+  padding: 10px;
+}
+
+.paragrafo-1 {
+  font-size: 12px;
+}
+
+footer button {
+  width: 230px;
+  height: 45px;
+  border-radius: 20px;
+  font-weight: 600;
+  border: none;
+}
+
+.button-container {
+  margin-right: 20px;
+}
+
+.button-container button {
+  font-weight: 700;
+  cursor: pointer;
+  width: 260px;
+  font-size: 14px;
+}

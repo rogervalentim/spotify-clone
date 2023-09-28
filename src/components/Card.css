@@ -1,0 +1,64 @@
+.card {
+  width: 180px;
+  background-color: 
+  #181818;
+  height: 250px;
+  border-radius: 5px;
+
+}
+
+.card:hover {
+  background-color: #242424;
+  cursor: pointer;
+}
+
+.card img {
+  width: 140px;
+  height: 140px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+  .play-button {
+    position: absolute; 
+    bottom: 0;
+    left: 70%;
+    transform: translateX(-40%); 
+    background-color: 
+    #1ed760; 
+    border-radius: 50%; 
+    padding: 10px;
+    cursor: pointer; 
+    display: flex;
+    align-items: center;
+  }
+
+  
+
+.card-position {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.subtitle {
+  color: #b3b3b3;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-left: 20px;
+}

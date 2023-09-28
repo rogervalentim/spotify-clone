@@ -1,0 +1,194 @@
+.sidebar-inicio {
+  background-color: #121212;
+  width: 314px;
+  height: 115px;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.sidebar-inicio-links li {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  color: #b3b3b3;
+}
+
+.sidebar-inicio-links a:hover, li:hover, .li-inicio:hover {
+  color: #fff;
+}
+
+.li-inicio {
+  padding-top: 15px;
+}
+
+.home-icon {
+  color: #b3b3b3;
+}
+
+.home-icon:hover {
+  color: #fff;
+}
+
+.sidebar-inicio-links,  a {
+  color: #b3b3b3;
+  margin-left: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sidebar-biblioteca {
+  background-color: #121212;
+  width: 314px;
+  height: 440px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  
+}
+
+.sidebar-inicio-biblioteca {
+  position: fixed;
+
+}
+
+.box-library {
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+  padding-left: 25px;
+}
+
+.box-library a {
+  color: #b3b3b3;
+}
+
+.box-library a:hover {
+  color: #fff;
+}
+
+.library-icon {
+  color: #b3b3b3;
+}
+
+.library-icon:hover {
+  color: #fff;
+}
+
+.plus-icon {
+  color: #b3b3b3;
+  padding-left: 80px;
+}
+
+.plus-icon:hover {
+  color: #fff;
+}
+
+.card-library {
+  background-color: #242424;
+  width: 280px;
+  height: 130px;
+  margin-left: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.card-library-position {
+  padding-left: 20px;
+  padding-top: 15px;
+}
+
+.card-library-text {
+  color: #fff;
+  font-size: 16px;
+}
+
+.card-library-text-2 {
+  color: #fff;
+  font-size: 12px;
+  padding-top: 10px;
+}
+
+.card-library button {
+  background-color: #fff;
+  border: none;
+  height: 30px;
+  width: 110px;
+  font-weight: 600;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.card-library button:hover {
+  width: 115px;
+  cursor: pointer;
+}
+
+.cards-library {
+  overflow-y: auto;
+  max-height: 220px;
+  width: 100%;
+}
+
+.card-library-1 {
+  background-color: #242424;
+  width: 280px;
+  height: 150px;
+  margin-left: 10px;
+  margin-top: 25px;
+  border-radius: 10px;
+}
+
+.card-library-1 button {
+  background-color: #fff;
+  border: none;
+  height: 30px;
+  width: 140px;
+  font-weight: 700;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.card-library-1 button:hover {
+  width: 145px;
+  cursor: pointer;
+}
+
+.cookies {
+  color: #b3b3b3;
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+.links-content {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 18px;
+}
+
+
+.links-content button {
+  width: 110px;
+  background-color: #121212;
+  color: #fff;
+  font-weight: 600;
+  height: 35px;
+  border-radius: 20px;
+  border: 1px solid #b3b3b3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  margin-top:  30px;
+}
+
+.links-content button:hover {
+  width: 115px;
+  border: 1px solid #fff;
+}
+
+.globe {
+  height: 20px;
+}
