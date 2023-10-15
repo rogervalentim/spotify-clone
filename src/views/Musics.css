@@ -39,3 +39,35 @@
   justify-content: space-around;
   margin-top: 20px;
 }
+
+/* mobile */
+
+.nav-mobile {
+  width: 100%;
+  display: flex;
+  padding: 15px;
+}
+
+.nav-mobile p {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.nav-mobile ul {
+  list-style: none;
+  display: flex;
+  padding-left: 90px;
+}
+
+.nav-mobile li {
+  padding-left: 10px;
+}
+
+.links-mobile div {
+  background-color: #21212;
+  color: #fff;
+  font-size: 16px;
+  width: 100%;
+  height: 20px;
+}

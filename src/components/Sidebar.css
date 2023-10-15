@@ -41,7 +41,7 @@
 .sidebar-biblioteca {
   background-color: #121212;
   width: 314px;
-  height: 440px;
+  height: 435px;
   border-radius: 10px;
   margin-top: 10px;
   margin-left: 10px;
@@ -191,4 +191,10 @@
 
 .globe {
   height: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar-inicio, .sidebar-biblioteca  {
+    display: none;
+  }
 }
