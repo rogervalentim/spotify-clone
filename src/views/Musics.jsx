@@ -2,12 +2,66 @@ import React from 'react'
 import Card from '../components/Card'
 import { singles } from '../contants/data'
 import { singles2 } from '../contants/data'
+
+import { singsMobile } from '../contants/data'
 import "./Musics.css"
+import { AiOutlineBell } from "react-icons/ai"
+import { BsClockHistory } from "react-icons/bs"
+import { FiSettings } from "react-icons/fi"
+import { useMediaQuery } from 'react-responsive'
+
+import CardMobile from "../components/CardMobile"
 
 const Musics = () => {
+
+  const isMobile = useMediaQuery({ maxWidth: 767})
   return (
     <>
-    <section className="musics-container">
+    {isMobile ? (
+      <>
+      <section className="musics-mobile">
+        <div className="header-mobile">
+        <p>Boa noite</p>
+        <div className="icons-header">
+        <AiOutlineBell color="#ffff" fontSize={20} />
+        <BsClockHistory color="#ffff" fontSize={20} style={{ marginLeft: "10px"}} />
+        <FiSettings color="#ffff" fontSize={20} style={{ marginLeft: "10px"}} />
+        </div>
+        </div>
+
+        <div className="btns">
+          <button className="btn-music">Música</button>
+          <button className="btn-podcast">Podcasts e programas</button>
+        </div>
+
+        <section  className="grid-cards-mobile">
+      {singsMobile.map((item) => (
+          <CardMobile title={item.title} subtitle={item.subtitle} image={item.image} key={item.id} />
+          ))}
+        </section>
+
+       <section className="playlist-mobile">
+        <div className="musics-title-container">
+       <h1>Playlist do Spotify</h1>
+     </div>
+
+     <div className="playlist-container">
+      {singles.map((item) => (
+       <div key={item.id} className="card-playlist">
+        <img className="img-music-mobile" src={item.image} alt={item.title} />
+        <p>{item.title}</p>
+        <p>{item.subtitle}</p>
+        </div>
+
+      ))}
+      </div>
+
+      </section>
+      </section>
+      </>
+    ): (
+      <>
+       <section className="musics-container">
       <div className="gradient">
       <div className="musics-title-container">
       <h1>Playlist do Spotify</h1>
@@ -34,6 +88,9 @@ const Musics = () => {
 
       <div style={{height: "150px"}} />
     </section>
+      </>
+    )}
+   
     </>
   )
 }

@@ -24,7 +24,7 @@ export const singles = [
   },
   {
     id: 3,
-    title: 'All Out 2010s',
+    title: 'Indie Mix',
     subtitle: 'The biggest songs of the 2010s',
     image: Single3 ,
   },
@@ -67,8 +67,47 @@ export const singles2 = [
     subtitle: 'Rock legends & epic songs that continue t...',
     image: Single9 ,
   },
+ {
+    id: 5,
+    title: 'Chill Hits',
+    subtitle: 'Kick back to the best new and recent chill...',
+    image: Single10 ,
+  },
+]
+
+export const singsMobile = [
+  {
+    id: 1,
+    title: 'All Out 2010s',
+    subtitle: 'The biggest songs of the 2010s',
+    image: Single8 ,
+  },
+  {
+    id: 2,
+    title: 'Rap Caviar',
+    subtitle: 'New music from Chris Brown, Megan Thee Stalli...',
+    image: Single2 ,
+  },
+  {
+    id: 3,
+    title: 'Top Hits',
+    subtitle: 'Zayn is on top of the Hottest 50!',
+    image: Single6 ,
+  },
+  {
+    id: 4,
+    title: 'Rock Classics',
+    subtitle: 'Rock legends & epic songs that continue t...',
+    image: Single9 ,
+  },
   {
     id: 5,
+    title: 'Indie Mix',
+    subtitle: 'The biggest songs of the 2010s',
+    image: Single3 ,
+  },
+  {
+    id: 6,
     title: 'Chill Hits',
     subtitle: 'Kick back to the best new and recent chill...',
     image: Single10 ,
