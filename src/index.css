@@ -33,6 +33,10 @@ body::-webkit-scrollbar {
 
 @media screen and (max-width: 767px) {
   body {
-    background-color: #020202;
+    background-color: #121212;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
   }
 }

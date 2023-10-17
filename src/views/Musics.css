@@ -98,8 +98,8 @@
   width: 60px;
   border-radius: 50px;
   border: none;
-  height: 22px;
-  background-color: #44403C;
+  height: 32px;
+  background-color: #2a2a2a;
   color: #ffff;
 }
 
@@ -107,17 +107,16 @@
   width: 150px;
   border-radius: 50px;
   border: none;
-  height: 22px;
-  background-color: #44403C;
+  height: 32px;
+  background-color: #2a2a2a;
   color: #ffff;
   margin-left: 5px;
 }
 
 .grid-cards-mobile {
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 35px;
-  width: 320px;
 }
 
 .img-music-mobile {
@@ -132,13 +131,23 @@
 .playlist-container {
   display: flex;
   margin-top: 20px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  width: 100vw;
 }
 
 .card-playlist {
   padding-left: 10px;
+  scroll-snap-align: start;
 }
 
-.card-playlist p {
+.card-playlist .title-mobile {
   color: #fff;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.card-playlist .subtitle-mobile {
+  color: #dedede;
   margin-top: 10px;
 }

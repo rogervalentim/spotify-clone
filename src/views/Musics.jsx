@@ -23,9 +23,9 @@ const Musics = () => {
         <div className="header-mobile">
         <p>Boa noite</p>
         <div className="icons-header">
-        <AiOutlineBell color="#ffff" fontSize={20} />
-        <BsClockHistory color="#ffff" fontSize={20} style={{ marginLeft: "10px"}} />
-        <FiSettings color="#ffff" fontSize={20} style={{ marginLeft: "10px"}} />
+        <AiOutlineBell color="#ffff" fontSize={25} />
+        <BsClockHistory color="#ffff" fontSize={22} style={{ marginLeft: "20px"}} />
+        <FiSettings color="#ffff" fontSize={22} style={{ marginLeft: "20px"}} />
         </div>
         </div>
 
@@ -49,8 +49,25 @@ const Musics = () => {
       {singles.map((item) => (
        <div key={item.id} className="card-playlist">
         <img className="img-music-mobile" src={item.image} alt={item.title} />
-        <p>{item.title}</p>
-        <p>{item.subtitle}</p>
+        <p className="title-mobile">{item.title}</p>
+        <p className="subtitle-mobile">{item.subtitle}</p>
+        </div>
+
+      ))}
+      </div>
+
+      </section>
+      <section className="playlist-mobile">
+        <div className="musics-title-container">
+       <h1>Concentração</h1>
+     </div>
+
+     <div className="playlist-container">
+      {singles2.map((item) => (
+       <div key={item.id} className="card-playlist">
+        <img className="img-music-mobile" src={item.image} alt={item.title} />
+        <p className="title-mobile">{item.title}</p>
+        <p className="subtitle-mobile">{item.subtitle}</p>
         </div>
 
       ))}
