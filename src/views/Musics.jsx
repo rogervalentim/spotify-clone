@@ -138,7 +138,7 @@ const Musics = ({ token }) => {
      <div className="playlist-container">
      {artists.map((item) => (
        <div key={item.id} className="card-playlist">
-        <img className="img-music-mobile" src={item.images[0].url} alt={item.name} />
+        <img className="img-music-mobile" src={item.images[1].url} alt={item.name} />
         <p className="title-mobile">{item.name}</p>
         <p className="subtitle-mobile">{item.description.length > 60 ? item.description.slice(0, 47) : item.description}</p>
         </div>
