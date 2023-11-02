@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Card.css';
 import { BsFillPlayFill } from "react-icons/bs"
-const Card = ({ image, title, subtitle }) => {
+const Card = ({ image, title, description }) => {
   const [isMouseOver, setIsMouseOver] = useState(false);
 
   const handleMouseEnter = () => {
@@ -24,7 +24,7 @@ const Card = ({ image, title, subtitle }) => {
           )}
         </div>
         <p className='title'>{title}</p>
-        <p className='subtitle'>{subtitle}</p>
+        <p className='subtitle'>{description}</p>
       </div>
     </div>
   );

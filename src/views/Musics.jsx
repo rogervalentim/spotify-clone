@@ -1,5 +1,5 @@
-import React from 'react'
-import Card from '../components/Card'
+import { useState, useEffect } from 'react'
+import { CardMobile, Card, HeaderMusic} from "../components/index"
 import { singles } from '../contants/data'
 import { singles2 } from '../contants/data'
 
@@ -9,10 +9,83 @@ import { AiOutlineBell } from "react-icons/ai"
 import { BsClockHistory } from "react-icons/bs"
 import { FiSettings } from "react-icons/fi"
 import { useMediaQuery } from 'react-responsive'
+import axios from "axios"
 
-import CardMobile from "../components/CardMobile"
+const Musics = ({ token }) => {
+  const [playlists, setPlaylists] = useState([])
+  const [ artists, setArtists] = useState([])
+  const [top, setTop] = useState([])
+  const [pagode, setPagode] = useState([])
 
-const Musics = () => {
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const { data } = await axios.get("https://api.spotify.com/v1/browse/categories/pop/playlists?limit=4" , {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        })
+        setPlaylists(data.playlists.items)
+      } catch(error) {
+        console.log(error)
+      }
+    }
+   
+    fetchData()
+
+  }, [])
+  
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const { data } = await axios.get("https://api.spotify.com/v1/browse/categories/classical/playlists?limit=4" , {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        })
+        setTop(data.playlists.items)
+        } catch(error) {
+        console.log(error)
+      }
+    }
+    fetchData()
+  }, [])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const { data } = await axios.get("https://api.spotify.com/v1/browse/featured-playlists?limit=4" , {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        })
+        setArtists(data.playlists.items)
+      } catch(error) {
+        console.log(error)
+      }
+    }
+   
+    fetchData()
+
+  }, [])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const { data } = await axios.get("https://api.spotify.com/v1/browse/categories/0JQ5DAqbMKFARvdmw6EIef/playlists?limit=4" , {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        })
+        setPagode(data.playlists.items)
+      } catch(error) {
+        console.log(error)
+      }
+    }
+   
+    fetchData()
+
+  }, [])
 
   const isMobile = useMediaQuery({ maxWidth: 767})
   return (
@@ -46,11 +119,11 @@ const Musics = () => {
      </div>
 
      <div className="playlist-container">
-      {singles.map((item) => (
+      {playlists.map((item) => (
        <div key={item.id} className="card-playlist">
-        <img className="img-music-mobile" src={item.image} alt={item.title} />
-        <p className="title-mobile">{item.title}</p>
-        <p className="subtitle-mobile">{item.subtitle}</p>
+        <img className="img-music-mobile" src={item.images[0].url} alt={item.name} />
+        <p className="title-mobile">{item.name}</p>
+        <p className="subtitle-mobile">{item.description.length > 60 ? item.description.slice(0, 47) : item.description}</p>
         </div>
 
       ))}
@@ -63,11 +136,47 @@ const Musics = () => {
      </div>
 
      <div className="playlist-container">
-      {singles2.map((item) => (
+     {artists.map((item) => (
        <div key={item.id} className="card-playlist">
-        <img className="img-music-mobile" src={item.image} alt={item.title} />
-        <p className="title-mobile">{item.title}</p>
-        <p className="subtitle-mobile">{item.subtitle}</p>
+        <img className="img-music-mobile" src={item.images[0].url} alt={item.name} />
+        <p className="title-mobile">{item.name}</p>
+        <p className="subtitle-mobile">{item.description.length > 60 ? item.description.slice(0, 47) : item.description}</p>
+        </div>
+
+      ))}
+      </div>
+
+      </section>
+
+      <section className="playlist-mobile">
+        <div className="musics-title-container">
+       <h1>Experimente algo diferente</h1>
+     </div>
+
+     <div className="playlist-container">
+      {top.map((item) => (
+       <div key={item.id} className="card-playlist">
+        <img className="img-music-mobile" src={item.images[0].url} alt={item.name} />
+        <p className="title-mobile">{item.name}</p>
+        <p className="subtitle-mobile">{item.description.length > 60 ? item.description.slice(0, 47) : item.description}</p>
+        </div>
+
+      ))}
+      </div>
+
+      </section>
+
+      <section className="playlist-mobile">
+        <div className="musics-title-container">
+       <h1>Pagode</h1>
+     </div>
+
+     <div className="playlist-container">
+      {pagode.map((item) => (
+       <div key={item.id} className="card-playlist">
+        <img className="img-music-mobile" src={item.images[0].url} alt={item.name} />
+        <p className="title-mobile">{item.name}</p>
+        <p className="subtitle-mobile">{item.description.length > 60 ? item.description.slice(0, 47) : item.description}</p>
         </div>
 
       ))}
@@ -78,28 +187,40 @@ const Musics = () => {
       </>
     ): (
       <>
-       <section className="musics-container">
+       <section >
       <div className="gradient">
-      <div className="musics-title-container">
-      <h1>Playlist do Spotify</h1>
-      <a href="#">Mostrar tudo</a>
-      </div>
+      <HeaderMusic title="Playlists do spotify" link="/top"/>
      
      <div className="grid-cards-musics">
-      {singles.map((item) => (
-        <Card key={item.id} image={item.image} title={item.title} subtitle={item.subtitle} />
+      {playlists.map((item) => (
+                <Card key={item.id} image={item.images[0].url} title={item.name} description={item.description.length > 60 ? item.description.slice(0,47) : item.description } />
+                
+                ))}
+          </div>
+      </div> 
+
+      <HeaderMusic title="Em Alta" link="/classical" />
+        
+      <div className="grid-cards-musics">
+       {top.map((item) => (
+        <Card key={item.id} image={item.images[0].url} title={item.name} description={item.description.length > 60 ? item.description.slice(0,47) : item.description } />
       ))}
       </div>
+
+      <HeaderMusic title="Experimente algo diferente" link="/brasil" />
+        
+      <div className="grid-cards-musics">
+       {artists.map((item) => (
+        <Card key={item.id} image={item.images[0].url} title={item.name} description={item.description.length > 60 ? item.description.slice(0,47) : item.description } />
+      ))}
       </div>
 
-     
-      <div className="musics-title-container" style={{marginTop: "80px"}}>
-      <h1>Concentração</h1>
-      <a href="#">Mostrar tudo</a>
-        </div>
+      
+      <HeaderMusic title="Pagode" link="/pagode" />
+        
       <div className="grid-cards-musics">
-      {singles2.map((item) => (
-        <Card key={item.id} image={item.image} title={item.title} subtitle={item.subtitle} />
+       {pagode.map((item) => (
+        <Card key={item.id} image={item.images[0].url} title={item.name} description={item.description.length > 60 ? item.description.slice(0,47) : item.description } />
       ))}
       </div>
 

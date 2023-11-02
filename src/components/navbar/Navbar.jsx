@@ -3,7 +3,7 @@ import { ChevronRight } from "lucide-react"
 
 import "./Navbar.css"
 
-const Navbar = () => {
+const Navbar = ({logout}) => {
   return (
     <nav>
       <div className="arrows-section">
@@ -16,11 +16,8 @@ const Navbar = () => {
       </div>
 
       <div className="nav-links">
-        <a href="#">
-          Regista-te
-        </a>
-
-        <button><strong>Iniciar sessão</strong></button>
+        <button className="btn-premium "><strong>Ver planos Premium</strong></button>
+        <button className="btn-logout" onClick={logout}>logout</button>
       </div>
     </nav>
   )

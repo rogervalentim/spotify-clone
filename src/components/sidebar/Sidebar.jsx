@@ -4,7 +4,7 @@ import { BsPlusLg } from 'react-icons/bs'
 
 import { BiLibrary } from 'react-icons/bi'
 
-import { Globe } from 'lucide-react'
+import { Link } from "react-router-dom"
 
 import './Sidebar.css'
 
@@ -13,16 +13,20 @@ const Sidebar = () => {
     <>
     <section className="sidebar-inicio">
       <ul className="sidebar-inicio-links">
-       <li className='home-icon'><BiHomeAlt className='library-icon' fontSize="25"/><a href="#">  Início  </a></li>
+       <li className='home-icon'><BiHomeAlt className='library-icon' fontSize="25"/><Link to="/">  Início  </Link></li>
        <li className="li-inicio"> <FiSearch fontSize="25" /> <a href="#"> Procurar </a></li>
       </ul>
     </section>
     <section className="sidebar-biblioteca">
       <div className="sidebar-biblioteca-links">
         <div className='box-library'>
+          <div className="library-link">
           <p className='library-icon'><BiLibrary  fontSize="25"/></p>
           <a href="#">A tua Biblioteca</a>
+          </div>
+          <div>
           <p className='plus-icon'><BsPlusLg fontSize="20" /></p>
+          </div>
         </div>
        </div>
 
@@ -47,10 +51,7 @@ const Sidebar = () => {
        </div>
        </section>
 
-      <div className="links-content">
-       <a href="#" className="cookies">Cookies</a>
-       <button><Globe className="globe" /> Português</button>
-       </div>
+     
     </section>
     </>
   )

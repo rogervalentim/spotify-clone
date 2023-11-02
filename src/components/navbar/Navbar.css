@@ -7,7 +7,7 @@ nav {
   background-color: #121212;
   border-radius: 10px 10px 0 0 ;
   align-items: center;
-  width: 1020px;
+  width: 922px;
 }
 
 .arrow-container {
@@ -50,10 +50,22 @@ nav {
   color: #fff;
 }
 
-.nav-links button {
+.nav-links .btn-premium {
   background: #fff;
   width: 150px;
-  height: 45px;
+  height: 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.nav-links .btn-logout {
+  background: #000;
+  color: #FFF;
+  width: 150px;
+  height: 30px;
   border: none;
   border-radius: 30px;
   font-size: 14px;
