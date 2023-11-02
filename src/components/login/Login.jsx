@@ -11,7 +11,9 @@ const Login = ({ authEndpoint, clientId, redirectUri, responseType}) => {
       <GrSpotify fontSize={250} color="#1ed760" />
       </div>
       <div>
-      <a href={`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=${responseType}`}><button>Login</button></a>
+      <a href={`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=${responseType}`}>
+        <button>Login</button>
+        </a>
       </div>
     </section>
   )
