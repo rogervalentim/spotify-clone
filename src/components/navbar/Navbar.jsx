@@ -3,13 +3,17 @@ import { ChevronRight } from "lucide-react"
 
 import "./Navbar.css"
 
+import { Link } from "react-router-dom"
+
 const Navbar = ({logout}) => {
   return (
     <nav>
       <div className="arrows-section">
+      <Link to="/">
       <div className="arrow-container">
         <ChevronLeft />
       </div>
+      </Link>
       <div className="arrow-container-1">
       <ChevronRight  />
       </div>

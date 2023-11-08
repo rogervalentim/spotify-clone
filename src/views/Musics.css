@@ -13,6 +13,6 @@
 /* mobile */
 @media screen and (max-width: 767px) {
   .grid-cards-musics {
-    grid-template-columns: auto;
+    grid-template-columns: auto auto;
   }
 }
