@@ -24,3 +24,10 @@
   overflow-y: auto;
   width: 100%;
 }
+
+@media screen and (max-width: 767px) {
+  .musics-container {
+  background-image: linear-gradient(#242424, #121212);
+  height: 100vh;
+  }
+}
