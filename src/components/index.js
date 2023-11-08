@@ -2,7 +2,6 @@ import Sidebar from "./sidebar/Sidebar";
 import Navbar from "./navbar/Navbar";
 import Footer from "./footer/Footer";
 import HeaderMusic from "./headerMusic/HeaderMusic";
-import CardMobile from "./cardMobile/CardMobile";
 import Card from "./card/Card";
 import Classical from "./classical/Classical"
 import TopMusics from "./topMusics/TopMusics"
@@ -16,7 +15,6 @@ export {
   Footer,
   HeaderMusic,
   Card,
-  CardMobile,
   Classical,
   TopMusics,
   Pagode,
